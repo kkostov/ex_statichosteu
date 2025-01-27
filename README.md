@@ -30,7 +30,7 @@ The package can be installed by adding `ex_statichosteu` to your list of depende
 ```elixir
 def deps do
   [
-    {:ex_statichosteu, "~> 1.0.0"}
+    {:ex_statichosteu, "~> 1.0.1"}
   ]
 end
 ```

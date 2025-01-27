@@ -2,7 +2,7 @@ defmodule ExStatichosteu.MixProject do
   use Mix.Project
 
   @source_url "https://github.com/kkostov/ex_statichosteu"
-  @version "1.0.0"
+  @version "1.0.1"
 
   def project do
     [

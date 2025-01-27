@@ -26,7 +26,7 @@ defmodule ExStatichostEu do
 
     url = "https://builder.statichost.eu/team/#{auth.team_id}/add-site"
 
-    body = request |> Map.from_struct() |> Map.to_list() |> IO.inspect()
+    body = request |> Map.from_struct() |> Map.to_list()
 
     {:ok, resp} =
       Req.post(url, headers: headers, form: body)
