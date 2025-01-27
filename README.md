@@ -1,6 +1,6 @@
 # ExStatichostEu ![Hex.pm Version](https://img.shields.io/hexpm/v/ex_statichosteu) [![Hex Docs](https://img.shields.io/badge/docs-hexpm-blue.svg)](https://hexdocs.pm/ex_statichosteu/)
 
-Unofficial client for the statichost.eu deployment api.
+Unofficial client for the [statichost.eu](https://www.statichost.eu/about/) deployment api.
 
 ## Usage
 
