@@ -1,25 +1,39 @@
-# ExStatichostEu
+# ExStatichostEu ![Hex.pm Version](https://img.shields.io/hexpm/v/ex_statichosteu) [![Hex Docs](https://img.shields.io/badge/docs-hexpm-blue.svg)](https://hexdocs.pm/ex_statichosteu/)
 
-Unofficial client for the statichost.eu deployment API.
+Unofficial client for the statichost.eu deployment api.
 
-**TODO: Add description**
+## Usage
+
+### Adding a new site to a team
+
+```elixir
+auth = %ExStatichostEu.Model.Auth{team_id: "team_id", bearer_token: "bearer_token"}
+
+add_site = %ExStatichostEu.Model.AddSite{name: "site-name", repository: "ssh://git@....git"}
+
+{:ok, %{"deploy_key" => deploy_key}} = ExStatichostEu.add_site(auth, add_site)
+
+```
+
+### Trigger a deployment
+
+```elixir
+{:ok, resp} = ExStatichostEu.trigger_build("test-site")
+```
+
+For more information, please refer to statichost's [documentation](https://www.statichost.eu/docs/).
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `ex_statichosteu` to your list of dependencies in `mix.exs`:
+The package can be installed by adding `ex_statichosteu` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
   [
-    {:ex_statichosteu, "~> 0.1.0"}
+    {:ex_statichosteu, "~> 1.0.0"}
   ]
 end
 ```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/ex_statichosteu>.
 
 ## License
 
